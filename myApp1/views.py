@@ -15,14 +15,14 @@ def insert(request):
     return render(request,'insert.html')
 
 
-def brand(request):
+def brands(request):
     return render(request,'brand.html')
 
 
 
 
-def insert_data(request):
-    brand= Brand.objects.get(pk=id)
+def insert_data(request, ids):
+    brand= Brand.objects.get(pk=ids)
     if request.method == "POST":
 
         brand_name = request.POST['prod_name']
